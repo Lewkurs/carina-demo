@@ -39,7 +39,7 @@ import com.zebrunner.carina.core.registrar.tag.TestPriority;
  *
  * @author qpsdemo
  */
-public class APISampleTest implements IAbstractTest {
+public class  APISampleTest implements IAbstractTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
