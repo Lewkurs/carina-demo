@@ -22,7 +22,7 @@ public class WeatherMobileTest implements IAbstractTest, IMobileUtils {
         Assert.assertTrue(weatherHomePage.isPageOpened(), "Weather home page isn't opened");
 
         // Check 2: Verify the current temperature display
-        String expectedTemperature = "25°C"; // This value should be dynamically fetched based on your testing strategy
+        String expectedTemperature = "25°C";
         Assert.assertEquals(weatherHomePage.getCurrentTemperature(), expectedTemperature, "Current temperature is incorrect");
 
         // Check 3: Verify the city name
@@ -34,7 +34,7 @@ public class WeatherMobileTest implements IAbstractTest, IMobileUtils {
         Assert.assertEquals(weatherHomePage.getWeatherCondition(), expectedCondition, "Weather condition is incorrect");
 
         // Check 5: Verify the date and time of the last update
-        String expectedLastUpdate = "Updated 10 minutes ago"; // Adjust based on your expectations
+        String expectedLastUpdate = "Updated 10 minutes ago";
         Assert.assertEquals(weatherHomePage.getLastUpdate(), expectedLastUpdate, "Last update time is incorrect");
     }
 

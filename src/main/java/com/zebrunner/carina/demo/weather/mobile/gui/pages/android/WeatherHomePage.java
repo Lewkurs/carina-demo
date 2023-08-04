@@ -9,6 +9,7 @@ import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import org.openqa.selenium.support.FindBy;
 
+@DeviceType(pageType = DeviceType.Type.ANDROID_PHONE, parentClass = WeatherHomePageBase.class)
 public class WeatherHomePage extends WeatherHomePageBase {
 
     @FindBy(id = "main_card_view")
@@ -62,18 +63,24 @@ public class WeatherHomePage extends WeatherHomePageBase {
         return weatherAlert.isElementPresent();
     }
 
+    @Override
+    public boolean isPageOpened() {
+        return detailedWeather.isElementPresent();
+    }
+
+
     public WeatherAlertPage clickWeatherAlert() {
         headerTitle.click();
-        return initPage(getDriver(), WeatherAlertPage.class); // Assuming WeatherAlertPage class exists
+        return initPage(getDriver(), WeatherAlertPage.class);
     }
 
     public NotificationsPage navigateToNotifications() {
         notificationsIcon.click();
-        return initPage(getDriver(), NotificationsPage.class); // Assuming NotificationsPage class exists
+        return initPage(getDriver(), NotificationsPage.class);
     }
 
     public String getLastUpdate() {
-        return lastUpdate.getAttribute("content-desc"); // Assuming content description contains the required data
+        return lastUpdate.getAttribute("content-desc");
     }
 
     public String getWeatherCondition() {

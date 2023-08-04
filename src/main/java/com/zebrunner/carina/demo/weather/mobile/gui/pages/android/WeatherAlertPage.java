@@ -7,7 +7,7 @@ import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 
 public class WeatherAlertPage extends WeatherAlertPageBase {
 
-    @FindBy(id = "alert_details") // Update with the correct locator
+    @FindBy(id = "alert_details")
     private ExtendedWebElement alertDetails;
 
     public WeatherAlertPage(WebDriver driver) {

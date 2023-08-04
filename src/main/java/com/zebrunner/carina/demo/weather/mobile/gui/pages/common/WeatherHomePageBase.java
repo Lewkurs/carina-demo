@@ -17,6 +17,7 @@ public abstract class WeatherHomePageBase extends AbstractPage {
     }
 
     public abstract boolean isWeatherAlertDisplayed();
+    public abstract boolean isPageOpened();
     public abstract WeatherAlertPageBase clickWeatherAlert();
     public abstract NotificationsPageBase navigateToNotifications();
     public abstract String getLastUpdate();

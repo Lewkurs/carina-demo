@@ -15,24 +15,19 @@ public class WeatherSearchPage extends WeatherSearchPageBase {
     @FindBy(id = "search_modules_list")
     private ExtendedWebElement searchButton;
 
-    @FindBy(id = "today_card_container") // replace with the actual ID or locator for the detailed weather
+    @FindBy(id = "today_card_container")
     private ExtendedWebElement detailedWeatherElement;
 
-    @FindBy(id = "card_daily_forecast_view") // replace with the actual ID or locator for the five-day forecast
+    @FindBy(id = "card_daily_forecast_view")
     private ExtendedWebElement fiveDayForecastElement;
 
-    @FindBy(id = "radar_map_image") // replace with the actual ID or locator for the weather map
+    @FindBy(id = "radar_map_image")
     private ExtendedWebElement weatherMapElement;
 
     public WeatherSearchPage(WebDriver driver) {
         super(driver);
     }
 
-    @Override
-    public boolean isPageOpened() {
-        // Replace with the correct condition to verify that the page is opened
-        return searchBar.isElementPresent();
-    }
     @Override
     public boolean isDetailedWeatherDisplayed() {
         return detailedWeatherElement.isElementPresent(); // checks if the detailed weather element is present
